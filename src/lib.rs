@@ -122,6 +122,19 @@ pub fn set_debug(value: bool) {
     DEBUG.set(value).expect("DEBUG already set");
 }
 
+/// Safe version of [`set_debug`] that returns an error if the debug flag is already set.
+///
+/// # Errors
+///
+/// Returns an error if the debug flag is already set.
+pub fn try_set_debug(value: bool) -> Result<(), &'static str> {
+    if DEBUG.get().is_none() {
+        DEBUG.set(value).map_err(|_| "DEBUG already set")
+    } else {
+        Err("DEBUG already set")
+    }
+}
+
 /// Set the verbose flag.
 ///
 /// # Panics
@@ -129,6 +142,19 @@ pub fn set_debug(value: bool) {
 /// Panics if the verbose flag is already set.
 pub fn set_verbose(value: bool) {
     VERBOSE.set(value).expect("VERBOSE already set");
+}
+
+/// Safe version of [`set_verbose`] that returns an error if the verbose flag is already set.
+///
+/// # Errors
+///
+/// Returns an error if the verbose flag is already set.
+pub fn try_set_verbose(value: bool) -> Result<(), &'static str> {
+    if VERBOSE.get().is_none() {
+        VERBOSE.set(value).map_err(|_| "VERBOSE already set")
+    } else {
+        Err("VERBOSE already set")
+    }
 }
 
 /// Check if the debug flag is set.

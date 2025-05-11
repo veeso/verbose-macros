@@ -2,7 +2,7 @@
 name = "verbose-macros"
 description = "A dependency-free macro library for **verbose!** and **debug!** printing in Rust."
 documentation = "https://docs.rs/verbose-macros/"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 rust-version = "1.85"
 include = [
