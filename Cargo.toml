@@ -1,8 +1,17 @@
 [package]
 name = "verbose-macros"
+description = "A dependency-free macro library for **verbose!** and **debug!** printing in Rust."
+documentation = "https://docs.rs/verbose-macros/"
 version = "0.1.0"
 edition = "2024"
 rust-version = "1.85"
+include = [
+  "README.md",
+  "CODE_OF_CONDUCT.md",
+  "LICENSE",
+  "src/**/*",
+  "examples/**/*",
+]
 authors = ["Christian Visintin <christian.visintin@veeso.dev>"]
 repository = "https://github.com/veeso/verbose-macros"
 license = "MIT"
@@ -14,6 +23,10 @@ keywords = [
   "debug-macro",
 ]
 categories = ["config", "value-formatting"]
+
+[lib]
+name = "verbose_macros"
+path = "src/lib.rs"
 
 [[example]]
 name = "example"
