@@ -1,0 +1,20 @@
+[package]
+name = "verbose-macros"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+authors = ["Christian Visintin <christian.visintin@veeso.dev>"]
+repository = "https://github.com/veeso/verbose-macros"
+license = "MIT"
+keywords = [
+  "verbose",
+  "debug",
+  "verbose-macros",
+  "verbose-macro",
+  "debug-macro",
+]
+categories = ["config", "value-formatting"]
+
+[[example]]
+name = "example"
+path = "examples/example.rs"
