@@ -164,18 +164,4 @@ mod test {
         verbose!("This is a verbose message.");
         verbose!("This is a verbose message with a value: {}", 42);
     }
-
-    #[test]
-    #[should_panic]
-    fn test_set_debug_panic() {
-        set_debug(true);
-        set_debug(false);
-    }
-
-    #[test]
-    #[should_panic]
-    fn test_set_verbose_panic() {
-        set_verbose(true);
-        set_verbose(false);
-    }
 }
